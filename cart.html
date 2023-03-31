@@ -3,10 +3,10 @@
 <head>
 <title>Your Shopping Cart</title>
 <meta charset="utf-8" />
-<link rel="stylesheet" href="kumar.css">
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="cart.css" media="screen" type="text/css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script type="text/javascript" src="kk.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </head>
 
 <body onload="displayCart()">
@@ -17,9 +17,7 @@
 				<html>
 				<head>
 					<title>Cart Page</title>
-					<script src="new.js">
-						
-					</script>
+				
 				</head>
 				
 				
@@ -27,7 +25,7 @@
 				
 				
                 <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="shop.html">shop</a></li>
+                <li><a href="index.html#product1">shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -42,35 +40,30 @@
 	<div id="content">
 		<h1>Your Shopping Cart</h1>
 		<form id="shopping-cart" action="cart.html" method="post">
-			<table class="shopping-cart"  id="cartTable">
+			
+			  <table class="shopping-cart"  id="cartTable">
 			 
 			  
 
-			</table>
-			<div class="cartItemsPrint">
-				<ul id="cartList"></ul>
-				<ul id="cartPrice"></ul>
-			</div>
+			  </table>
+			  
+			  
+		   <div id="chechTotal" class="pricing">
+  
+		   </div>
 			
-				
 			
-				
-			<p id="sub-total">
-				<strong>Sub Total</strong>: $<span id="totalPrice"></span>
-			</p>
+			
 			<ul id="shopping-cart-actions">
-				<li>
-					<input type="submit" name="update" id="update-cart" class="btn" value="Update Cart" />
-				</li>
-				<li>
-					<input type="submit" name="delete" id="empty-cart" class="btn" value="Empty Cart" />
-				</li>
-				<li>
-					<button onclick=" window.location.href='kumar.html';">Back to Home</button>
-				</li>
+				
 				<li>
 					<a href="checkout.html" class="btn">Go To Checkout</a>
+					
+					
 				</li>
+				<li><button onclick="clearCart(); window.location.href='kumar.html';">clear cart</button>
+				</li>
+
 			</ul>
 		</form>
 	</div>
@@ -78,10 +71,9 @@
 	
 
 </div>
-<button onclick="clearCart(); window.location.href='kumar.html';">clear</button>
-<footer id="site-info">
-		Copyright &copy; 
-	</footer>
+<button onclick=" window.location.href='index.html'">Back to Home</button>
+
+
 
 </body>
 </html>	

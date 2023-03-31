@@ -4,6 +4,7 @@ function displayCart() {
 
     // Display cart details in cart page
     var cartTable = document.getElementById("cartTable");
+    var cartTotall = document.getElementById("pricing");
     var totalPrice = 0;
 
     // Add table headers
@@ -45,13 +46,41 @@ function displayCart() {
     var footerRow = document.createElement("tr");
     var footerLabel = document.createElement("td");
     var footerTotal = document.createElement("td");
+    var footerTotalP = document.createElement("p");
     footerLabel.colSpan = 2;
     footerLabel.innerText = "Total Price";
     footerTotal.innerText = "$" + totalPrice.toFixed(2);
+    footerTotalP.innerText="Shiping: $"+ 50;
+    var storedShipping = localStorage.getItem("shipping");
+    var a= totalPrice.toFixed(2)-9;
+    if(storedShipping==1122)
+    {
+        footerTotal.innerText = "$" + totalPrice.toFixed(2)+ " -9= "+a;
+        footerTotalP.innerText="Shiping: $"+ 00;
+    }
+    
+    if(totalPrice<500){
+        chechTotal.appendChild(footerTotalP);
+    }
+    else{
+        footerTotalP.innerText="Shiping: $"+ 0.00 ;
+        chechTotal.appendChild(footerTotalP);
+    }
+    
     footerRow.appendChild(footerLabel);
     footerRow.appendChild(footerTotal);
     cartTable.appendChild(footerRow);
+    localStorage.removeItem("shipping");
+    var discount = document.getElementById("discount");
 }
+
+function getValue() {
+    var inputElement = document.getElementById("myInput");
+    var inputValue = inputElement.value;
+    localStorage.setItem("shipping", inputValue);
+    window.location.reload();
+}
+
 
 
 
@@ -74,3 +103,5 @@ function addToCart(productName, price, imageUrl) {
     // Redirect to cart page
     window.location.href = "cart.html";
 }
+
+  
