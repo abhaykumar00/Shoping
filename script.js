@@ -1,3 +1,14 @@
+function selectPaymentMethod() {
+	var paymentMethod = document.getElementById("paymentMethod").value;
+	var paymentMethods = document.getElementsByClassName("paymentMethod");
+
+	for (var i = 0; i < paymentMethods.length; i++) {
+		paymentMethods[i].classList.remove("show");
+	}
+
+	document.getElementById(paymentMethod).classList.add("show");
+}
+
 function displayCart() {
     // Get cart details from local storage
     var cart = JSON.parse(localStorage.getItem("cart"));

@@ -1,22 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Your Order</title>
-<meta charset="utf-8" />
-<link rel="stylesheet" href="style.css" media="screen" type="text/css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script type="text/javascript" src="script.js"></script>
+	<title>Payment Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+<body>
+	<section id="header">
+        <a href="index.html"><img src="img/logo.png" class="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="#product1">shop</a></li>
+                <li><a  href="checkout.html">checkout</a></li>
+                <li><a href="cart.html"><img class="cartIcon" src="a.jpg"></a></li>
 
-<body >
+            </ul>
+        </div>
+    </section>
+	<div class="container">
+		<h1>Payment Page</h1>
+		<form>
+			<label for="paymentMethod">Select Payment Method:</label>
+			<select id="paymentMethod" onchange="selectPaymentMethod()">
+				<option value="paytm">select</option>
+				<option value="paytm">Pay with Paytm</option>
+				<option value="atm">Pay with ATM card</option>
+				<option value="netbanking">Pay with Net Banking</option>
+			</select>
+			<div id="paytm" class="paymentMethod">
+				<h2>Pay with Paytm</h2>
+				<input type="text"> Input your paytm details</input>
+				<p>Please enter your Paytm details to proceed with payment.</p>
+				<!-- Paytm payment form goes here -->
+			</div>
+			<div id="atm" class="paymentMethod">
+				<h2>Pay with ATM card</h2>
+				<input type="text" placeholder="Enter your 16 digit pin number">
+				<input type="text" placeholder="CVV">
+				<p>Please enter your ATM card details to proceed with payment.</p>
+				<!-- ATM card payment form goes here -->
+			</div>
+			<div id="netbanking" class="paymentMethod">
+				<h2>Pay with Net Banking</h2>
+				<input type="text" placeholder="Enter you ID">
+				<input type="text" placeholder="Enter your Password">
+				
+				<!-- Net banking payment form goes here -->
+			</div>
+			<button type="submit" >Proceed to Payment</button>
+		</form>
+	</div>
 
-<h1> Do your payment by any of the method</h1>
-	<a href="https://www.phonepe.com/"><button>Pay with Phone pay</button></a>
-	<a href="www.phone.pe.com"><button>Pay with Wallet</button></a>
-	<a href="www.phone.pe.com"><button>Pay with ATM</button></a>
-
-
+	<script src="script.js"></script>
 </body>
-</html>	
-
-   
+</html>

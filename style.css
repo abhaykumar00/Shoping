@@ -1,4 +1,49 @@
 
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 50px;
+	text-align: center;
+}
+
+h1 {
+	margin-bottom: 30px;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+select {
+	padding: 10px;
+	margin-bottom: 30px;
+}
+
+.paymentMethod {
+	display: none;
+}
+
+.paymentMethod.show {
+	display: block;
+	border: 1px solid #ccc;
+	padding: 20px;
+	margin-bottom: 30px;
+	text-align: left;
+}
+
+button[type="submit"] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button[type="submit"]:hover {
+	background-color: #3e8e41;
+}
 .section-p1{
     padding: 40px 80px;
 }
